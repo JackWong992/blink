@@ -1,12 +1,11 @@
 {
-  "pages":[
+  "pages": [
     "pages/classic/classic"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
     "navigationBarBackgroundColor": "#ffffff",
     "navigationBarTitleText": "毛哥的牛腩面",
-    "navigationBarTextStyle":"black",
+    "navigationBarTextStyle": "black",
     "navigationStyle": "default",
     "backgroundColor": "#ffffff",
     "enablePullDownRefresh": false

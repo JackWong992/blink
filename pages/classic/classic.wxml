@@ -1,2 +1,12 @@
-<!--pages/classic/classic.wxml-->
-<v-like/>
+<view class="container">
+  <view class="header">
+    <!-- 日期组件 -->
+    <v-epsoide index="{{classic.index}}" class="epsoide" />
+    <!-- 点赞 area -->
+    <v-like bind:like="onLike"   like="{{classic.like_status}}}" count="{{classic.fav_nums}}" class="like" />
+  </view>
+  <!-- 首页图片+流行语 area -->
+  <v-movie img="{{classic.image}}" content="{{'\"'+classic.content+'\"'}}"/>
+  <!-- 导航栏 area -->
+  <v-navi  bind:left="onNext" bind:right="onPrevious"  title="{{classic.title}}" class="navi"  first="{{first}}" latest="{{latest}}" />
+</view>
