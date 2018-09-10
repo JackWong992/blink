@@ -22,10 +22,12 @@ Page({
     classicModel.getLatest(res => {
      // console.log(res);
       this.setData({
-        classic: res
+        classic: res     
       });
     });
   },
+
+
   onLike:function(event){
     //console.log(event)
     let behavior = event.detail.behavior

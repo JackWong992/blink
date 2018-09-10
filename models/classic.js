@@ -15,10 +15,11 @@ class ClassicModel extends HTTP {
     let key = nextOrPrevious == 'next'?this._getKey(index+1):this._getKey(index-1)
     let classic = wx.getStorageSync(key)
     if(!classic){
-      this.request({
-        url: 'classic/'+index+'/'+nextOrPrevious,
+      this.request({   
+        url: `classic/${index}/${nextOrPrevious}`,
         success:(res)=>{
-         wx.setStorageSync(this._getKey(res.index), res)
+         wx.setStorageSync(
+           this._getKey(res.index), res)
          sCallback(res)
         }
       })
